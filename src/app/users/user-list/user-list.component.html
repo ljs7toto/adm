@@ -1,0 +1,10 @@
+<h1>USERS</h1>
+<a routerLink="/users/create">Create User</a>
+<div *ngIf = "users">
+  <div *ngFor="let user of users">
+    <div>
+      <img [src]="user.avatar" [routerLink]="['/users', user.id]">
+      <h2>{{ user.name }} <small>{{ user.username }}</small></h2>
+    </div>
+  </div>
+</div>
